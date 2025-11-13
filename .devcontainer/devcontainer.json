@@ -1,0 +1,35 @@
+{
+  "name": "roboworks-rosbot",
+  "build": {
+    "dockerfile": "../docker/Dockerfile",
+    "context": "..",
+    "args": {
+      "ROS_DISTRO": "humble"
+    }
+  },
+  "workspaceFolder": "/roboworks-rosbot",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/roboworks-rosbot,type=bind",
+  "containerEnv": {
+    "ROS_DISTRO": "humble",
+    "RMW_IMPLEMENTATION": "rmw_fastrtps_cpp",
+    "ROS_LOCALHOST_ONLY": "0",
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  "runArgs": [
+    "--network=host",
+    "--ipc=host",
+    "--privileged",
+    "-v", "/tmp/.X11-unix:/tmp/.X11-unix:rw",
+    "-e", "QT_X11_NO_MITSHM=1"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.cpptools",
+        "ms-python.python",
+        "ms-iot.vscode-ros"
+      ]
+    }
+  }
+}

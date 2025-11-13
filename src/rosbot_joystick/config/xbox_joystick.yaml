@@ -1,0 +1,8 @@
+rosbot_joystick:
+  ros__parameters:
+    axis_linear: 1         # right stick vertical
+    axis_angular: 0        # left stick horizontal
+    max_vel_linear: 0.5    # m/s
+    max_vel_angular: 1.0   # rad/s
+    deadzone_linear: 0.1   # [-1.0, 1.0]
+    deadzone_angular: 0.1  # [-1.0, 1.0]
