@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
   libgl1-mesa-glx \
   libglu1-mesa \
   ros-${ROS_DISTRO}-joy \
+  ros-${ROS_DISTRO}-rqt \
   ros-${ROS_DISTRO}-rviz2 \
   ros-${ROS_DISTRO}-teleop-twist-keyboard \
   ros-${ROS_DISTRO}-teleop-twist-joy \

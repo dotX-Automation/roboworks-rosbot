@@ -6,8 +6,6 @@ import os
 
 def generate_launch_description():
     pkg_share = get_package_share_directory('rosbot_joystick')
-
-    # config_path = os.path.join(pkg_share, 'config', 'xbox_joystick.yaml')
     config_path = os.path.join(pkg_share, 'config', 'ps3_joystick.yaml')
 
     return LaunchDescription([
