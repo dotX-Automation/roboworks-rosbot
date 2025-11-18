@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
   ros-${ROS_DISTRO}-rviz2 \
   ros-${ROS_DISTRO}-teleop-twist-keyboard \
   ros-${ROS_DISTRO}-teleop-twist-joy \
+  ros-${ROS_DISTRO}-rmw-zenoh-cpp \
   && rm -rf /var/lib/apt/lists/*
 
 ENV LIBGL_ALWAYS_SOFTWARE=1
